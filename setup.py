@@ -1,14 +1,14 @@
 # import os
 # from glob import glob
 
-from setuptools import setup
+from setuptools import setup, find_packages
 
 package_name = "vartools"
 
 setup(
     name=package_name,
     version="0.0.1",
-    packages=[package_name],
+    packages=find_packages(exclude=["*.tests", "*.tests.*", "tests.*", "tests"]),
     install_requires=["setuptools"],
     zip_safe=True,
     maintainer="Lukas Huber",
